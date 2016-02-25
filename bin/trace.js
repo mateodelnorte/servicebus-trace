@@ -29,7 +29,7 @@ store.list(0, -1, function (err, result) {
       colors.green('direction'),
       colors.green('date')
     ],
-    colWidths: [5, 35, 30, 30, 30, 11, 42]
+    colWidths: [8, 35, 30, 30, 30, 11, 42]
   });
 
   let i = 0;
@@ -45,6 +45,10 @@ store.list(0, -1, function (err, result) {
     let queueName = tokens[3];
     let type = tokens[4];
     let direction = tokens[5];
+
+    if (process.env.SERVICEBUS_TRACE_IGNORE.split(',').some((key) => {
+      return (queueName || serviceName).match(key);
+    })) return;
 
     var map = {
       in: 'inbound',
