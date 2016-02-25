@@ -34,7 +34,7 @@ store.list(0, -1, function (err, result) {
 
   let i = 0;
 
-  result.forEach((r) => {
+  result.reverse().forEach((r) => {
 
     i++;
 
