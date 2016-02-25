@@ -46,7 +46,7 @@ store.list(0, -1, function (err, result) {
     let type = tokens[4];
     let direction = tokens[5];
 
-    if (process.env.SERVICEBUS_TRACE_IGNORE.split(',').some((key) => {
+    if (process.env.SERVICEBUS_TRACE_IGNORE && process.env.SERVICEBUS_TRACE_IGNORE.split(',').some((key) => {
       return (queueName || serviceName).match(key);
     })) return;
 
