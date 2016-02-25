@@ -1,6 +1,30 @@
 # servicebus-trace
 servicebus middleware to publish message receipt information to a central store, for message tracking and tracing purposes.
 
+## middleware
+
+Set up the servicebus-trace middleware as follows:
+```
+var config = require('cconfig')();
+var servicebus = require('servicebus');
+var trace = require('servicebus-trace');
+
+var bus = servicebus.bus({
+  url: config.RABBITMQ_URL
+});
+
+bus.use(trace({
+  serviceName: 'my-service-name',
+  store: new trace.RedisStore({
+    host: config.REDIS_HOST || 'localhost',
+    port: config.REDIS_PORT || 6379
+  })
+}));
+
+module.exports = bus;
+```
+At this moment, only the RedisStore is available. 
+
 ### servicebus-trace utility
 
 Install servicebus-trace globally to allow using the `servicebus-trace` utility. 
