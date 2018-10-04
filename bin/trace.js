@@ -4,7 +4,7 @@
 'use strict';
 
 const colors = require('colors/safe');
-const Table = require('cli-table2');
+const Table = require('cli-table3');
 const trace = require('../');
 const util = require('util');
 
