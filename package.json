@@ -1,6 +1,6 @@
 {
   "name": "servicebus-trace",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "servicebus middleware to publish message receipt information to a central store, for message tracking and tracing purposes. ",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
   "author": "mattwalters5@gmail.com",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^2.4.5",
+    "mocha": "^5.2.0",
     "servicebus": "^2.0.1",
     "should": "^8.2.2"
   },
