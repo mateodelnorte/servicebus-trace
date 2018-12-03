@@ -1,4 +1,7 @@
 # servicebus-trace
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/mateodelnorte/servicebus-trace.svg)](https://greenkeeper.io/)
+
 servicebus middleware to publish message receipt information to a central store, for message tracking and tracing purposes.
 
 ## middleware
