@@ -21,7 +21,7 @@
   "license": "ISC",
   "devDependencies": {
     "mocha": "^5.2.0",
-    "servicebus": "^2.0.1",
+    "servicebus": "2.3.3",
     "should": "^13.2.3"
   },
   "dependencies": {
